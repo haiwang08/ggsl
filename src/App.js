@@ -24,27 +24,63 @@ function App() {
 	return (
 		<div className="App">
 			<div className="head">
-				<button
-					onClick={() => {
-						displayPage(0);
-					}}
+				<div
+					class="btn-group"
+					role="group"
+					aria-label="Basic radio toggle button group"
 				>
-					五十音
-				</button>
-				<button
-					onClick={() => {
-						displayPage(1);
-					}}
-				>
-					Words
-				</button>
-				<button
-					onClick={() => {
-						displayPage(2);
-					}}
-				>
-					Test
-				</button>
+					<input
+						type="radio"
+						class="btn-check"
+						name="btnradio"
+						id="btnradio1"
+						autocomplete="off"
+						checked
+					/>
+					<label
+						className="btn btn-primary"
+						for="btnradio1"
+						onClick={() => {
+							displayPage(0);
+						}}
+					>
+						五十音
+					</label>
+
+					<input
+						type="radio"
+						class="btn-check"
+						name="btnradio"
+						id="btnradio2"
+						autocomplete="off"
+					/>
+					<label
+						className="btn btn-primary"
+						for="btnradio2"
+						onClick={() => {
+							displayPage(1);
+						}}
+					>
+						Words
+					</label>
+
+					<input
+						type="radio"
+						class="btn-check"
+						name="btnradio"
+						id="btnradio3"
+						autocomplete="off"
+					/>
+					<label
+						className="btn btn-primary"
+						for="btnradio3"
+						onClick={() => {
+							displayPage(2);
+						}}
+					>
+						Test
+					</label>
+				</div>
 			</div>
 			<div className="body">
 				{menuDisplay[0] && <Words />}
